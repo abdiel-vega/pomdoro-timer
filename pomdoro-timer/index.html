@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div id="title"><h1 class="headings">Pomodoro Timer</h1></div>
+        <hr class="line-breaks" id="title-break">
+        <!-- Timer Display -->
+        <div class="container">
+            <div class="back-element"><img id="tomato-svg" src="svg/tomato.svg"></div>
+            <div class="front-element" id="timer">25:00</div>
+        </div>
+        <!-- Timer Radio Buttons -->
+        <div id="timer-selector">
+            <label for="short-break" class="radio">
+                <input type="radio" value="300" id="short-break" name="timer-option"></input>
+                <span class="name">Short Break</span>
+            </label>
+            <label for="medium-break" class="radio">
+                <input type="radio" value="600" id="medium-break" name="timer-option"></input>
+                <span class="name">Medium Break</span>
+            </label>
+            <label for="long-break" class="radio">
+                <input type="radio" value="900" id="long-break" name="timer-option"></input>
+                <span class="name">Long Break</span>
+            </label>
+            <label for="pomodoro-timer" class="radio">
+                <input type="radio" value="1500" id="pomodoro-timer" name="timer-option" checked></input>
+                <span class="name" id="pomodoro-option">Pomodoro</span>
+            </label>
+        </div>
+        <div id="controls">
+            <button class="timer-buttons" id="start-pause">Start</button>
+            <button class="timer-buttons" id="reset">Reset</button>
+        </div>
+        <hr class="line-breaks" id="todo-break">
+        <!-- To-Do list -->
+        <div id="todo-list">
+            <h2 class="headings">To-Do List</h2>
+            <input type="text" id="todo-input" placeholder="Add a new task..." autocomplete="off">
+            <button id="add-todo">Add</button>
+            <ul id="todo-items"></ul>
+        </div>
+        <!-- Pomodoro Stats -->
+        <div id="stats">
+            <p class="little-text">Total Pomodoro Sessions: <span class="little-text" id="pomodoro-count">0</span></p>
+            <p class="little-text">Pomodoro Cycles Completed: <span class="little-text" id="completed-cycles">0</span></p>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
